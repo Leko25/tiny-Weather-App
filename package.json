@@ -4,7 +4,8 @@
   "description": "Simple Weather Application ",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js -e js,ejs"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
