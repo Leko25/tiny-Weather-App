@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var {geocode, forecast} = require('./utils');
 var app = express();
+var port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "./public")));
 app.set('view engine', 'ejs');
@@ -53,6 +54,6 @@ app.get("*", (req, res)=>{
   });
 });
 
-app.listen(3000, ()=>{
-  console.log("Now listening at port 3000");
+app.listen(port, ()=>{
+  console.log("Now listening at port " + port);
 });

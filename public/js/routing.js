@@ -21,7 +21,7 @@ weatherForm.addEventListener('submit', (e)=>{
   displayLocation.textContent = "Loading...";
   displayLocation.setAttribute('style', 'color: gold; font-weight: 700;');
   displayForecast.textContent = '';
-  fetch('http://127.0.0.1:3000/weather?address=' + encodeURIComponent(searchElement.value)).then((response)=>{
+  fetch('/weather?address=' + encodeURIComponent(searchElement.value)).then((response)=>{
     response.json().then((data)=>{
       if(data.err){
         displayLocation.setAttribute('style', 'color: red');
