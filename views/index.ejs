@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="icon" href="/assets/weather-partly-snowy-rainy.png">
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="main-content">
+        <%- include ('partials/header') %>
+        <form>
+          <input type="text" name="weather" placeholder="location">
+          <button type="submit">Search</button>
+        </form>
+        <hr>
+        <p id="forecast-alert1"></p>
+        <p id="forecast-alerts2"></p>
+    </div>
+    <%- include ('partials/footer') %>
+    <script type="text/javascript" src='/js/routing.js'></script>
+  </body>
+</html>
